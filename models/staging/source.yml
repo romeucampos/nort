@@ -16,10 +16,10 @@ sources:
         columns:
           - name: ProductID
             description: Product ID
-      - name: Shippers
+      - name: Suppliers
         columns:
-          - name: ShipperID
-            description: Shipper ID
+          - name: SupplierID
+            description: Supplier ID
             test:
               - unique
               - not_null
@@ -34,6 +34,20 @@ sources:
         columns:
           - name: CustomerID
             description: Customer ID
+            test:
+              - unique
+              - not_null
+      - name: Order Details
+        columns:
+          - name: OrderID
+            description: Order ID
+            test:
+              - unique
+              - not_null
+      - name: Shippers
+        columns:
+          - name: ShipperID
+            description: Shippers ID
             test:
               - unique
               - not_null
