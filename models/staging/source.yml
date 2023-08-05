@@ -1,0 +1,39 @@
+version: 2
+
+sources:
+  - name: nortwind
+    description: This is a replica of the database nortwind.
+    database: golden-toolbox-269214 
+    tables:
+      - name: Orders
+        columns:
+          - name: OrderID
+            description: Order ID
+            test:
+              - unique
+              - not_null
+      - name: Products
+        columns:
+          - name: ProductID
+            description: Product ID
+      - name: Shippers
+        columns:
+          - name: ShipperID
+            description: Shipper ID
+            test:
+              - unique
+              - not_null
+      - name: Employees
+        columns:
+          - name: EmployeeID
+            description: Employee ID
+            test:
+              - unique
+              - not_null
+      - name: Customers
+        columns:
+          - name: CustomerID
+            description: Customer ID
+            test:
+              - unique
+              - not_null
